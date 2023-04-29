@@ -9,28 +9,42 @@
   flex-shrink: 0;
 }
 .keyboard__key.Space {
-  flex: 4;
+  flex: 3.5;
+  background-color: $color-keystrokes;
 }
 .keyboard__key.Enter {
-  flex: 0.5;
+  flex: 0.43;
+  background-color: $color-keystrokes;
 }
 .keyboard__key.CapsLock {
-  flex: 0.4;
+  flex: 0.52;
+  background-color: $color-keystrokes;
 }
 .keyboard__key.ShiftLeft {
-  flex: 0.7;
+  flex: 0.92;
+  background-color: $color-keystrokes;
 }
 .keyboard__key.Delete {
-  width: 8%;
   flex: 0.5;
+  background-color: $color-keystrokes;
 }
 .keyboard__key.Tab{
   flex: 0.7;
+  background-color: $color-keystrokes;
 }
 .keyboard__key.ControlLeft,
 .keyboard__key.ControlRight,{
-  flex: 0.7;
+  flex: 0.6;
+  background-color: $color-keystrokes;
 }
 .keyboard__key.Backspace{
   flex: 1;
+  background-color: $color-keystrokes;
+}
+@media (max-width: 730px) {
+
+  .keyboard__key {
+    font-size: 1rem;
+  }
+
 }

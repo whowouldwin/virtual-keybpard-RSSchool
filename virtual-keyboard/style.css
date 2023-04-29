@@ -327,10 +327,10 @@ body {
 
 .wrapper {
   font-family: "Red Hat Mono", monospace;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #FFFFFF;
   max-width: 1200px;
-  min-width: 500px;
+  min-width: 520px;
   height: 100vh;
   padding: 0 20px;
   margin: auto;
@@ -338,8 +338,17 @@ body {
   user-select: none;
 }
 
-.textarea {
+.title {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.textarea,
+.keyboard {
   width: 100%;
+}
+
+.textarea {
   box-sizing: border-box;
   height: 30vh;
   resize: none;
@@ -356,12 +365,12 @@ body {
   flex-direction: column;
   background-color: #d7d7ca;
   border-radius: 10px;
-  height: 40vh;
+  font-size: 2rem;
 }
 .keyboard__row {
   display: flex;
   justify-content: space-between;
-  margin: 10px 1.5%;
+  margin: 5px 1.5%;
   gap: 1.5%;
 }
 
@@ -373,6 +382,15 @@ body {
   margin-bottom: 15px;
 }
 
+@media (max-width: 730px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .description,
+  .language {
+    font-size: 1rem;
+  }
+}
 .keyboard__key {
   cursor: pointer;
   background-color: #595859;
@@ -385,37 +403,50 @@ body {
 }
 
 .keyboard__key.Space {
-  flex: 4;
+  flex: 3.5;
+  background-color: #444344;
 }
 
 .keyboard__key.Enter {
-  flex: 0.5;
+  flex: 0.43;
+  background-color: #444344;
 }
 
 .keyboard__key.CapsLock {
-  flex: 0.4;
+  flex: 0.52;
+  background-color: #444344;
 }
 
 .keyboard__key.ShiftLeft {
-  flex: 0.7;
+  flex: 0.92;
+  background-color: #444344;
 }
 
 .keyboard__key.Delete {
-  width: 8%;
   flex: 0.5;
+  background-color: #444344;
 }
 
 .keyboard__key.Tab {
   flex: 0.7;
+  background-color: #444344;
 }
 
 .keyboard__key.ControlLeft,
 .keyboard__key.ControlRight {
-  flex: 0.7;
+  flex: 0.6;
+  background-color: #444344;
 }
 
 .keyboard__key.Backspace {
   flex: 1;
+  background-color: #444344;
+}
+
+@media (max-width: 730px) {
+  .keyboard__key {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
