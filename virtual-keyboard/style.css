@@ -330,6 +330,7 @@ body {
   font-size: 2rem;
   color: #FFFFFF;
   max-width: 1200px;
+  min-width: 500px;
   height: 100vh;
   padding: 0 20px;
   margin: auto;
@@ -340,7 +341,7 @@ body {
 .textarea {
   width: 100%;
   box-sizing: border-box;
-  height: 35vh;
+  height: 30vh;
   resize: none;
   padding: 15px;
   margin-bottom: 15px;
@@ -355,7 +356,66 @@ body {
   flex-direction: column;
   background-color: #d7d7ca;
   border-radius: 10px;
-  height: 35vh;
+  height: 40vh;
+}
+.keyboard__row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 1.5%;
+  gap: 1.5%;
+}
+
+.keyboard__row:first-child {
+  margin-top: 15px;
+}
+
+.keyboard__row:last-child {
+  margin-bottom: 15px;
+}
+
+.keyboard__key {
+  cursor: pointer;
+  background-color: #595859;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: calc(2.25% - 0.5em);
+  padding-bottom: calc(2.25% - 0.5em);
+  width: 5%;
+  flex-shrink: 0;
+}
+
+.keyboard__key.Space {
+  flex: 4;
+}
+
+.keyboard__key.Enter {
+  flex: 0.5;
+}
+
+.keyboard__key.CapsLock {
+  flex: 0.4;
+}
+
+.keyboard__key.ShiftLeft {
+  flex: 0.7;
+}
+
+.keyboard__key.Delete {
+  width: 8%;
+  flex: 0.5;
+}
+
+.keyboard__key.Tab {
+  flex: 0.7;
+}
+
+.keyboard__key.ControlLeft,
+.keyboard__key.ControlRight {
+  flex: 0.7;
+}
+
+.keyboard__key.Backspace {
+  flex: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

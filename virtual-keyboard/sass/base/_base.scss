@@ -11,6 +11,7 @@ body {
   font-size: 2rem;
   color: $color-light;
   max-width: 1200px;
+  min-width: 500px;
   height: 100vh;
   padding: 0 20px;
   margin: auto;
@@ -20,7 +21,7 @@ body {
 .textarea {
   width: 100%;
   box-sizing: border-box;
-  height: 35vh;
+  height: 30vh;
   resize: none;
   padding: 15px;
   margin-bottom: 15px;
@@ -34,5 +35,17 @@ body {
   flex-direction: column;
   background-color: $color-keyboard;
   border-radius: 10px;
-  height: 35vh;
+  height: 40vh;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 1.5%;
+    gap: 1.5%;
+  }
+}
+.keyboard__row:first-child {
+  margin-top: 15px;
+}
+.keyboard__row:last-child {
+  margin-bottom: 15px;
 }

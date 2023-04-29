@@ -1,3 +1,5 @@
+import { keys } from './keys.js';
+
 const createBody = () => {
   function createElementWithClass(type, className, text) {
     const element = document.createElement(type);
@@ -15,6 +17,18 @@ const createBody = () => {
   const language = createElementWithClass('p', ['language'], 'To switch language, use the combination: left ctrl + alt.');
   wrapper.append(title, textarea, keyboard, description, language);
   document.body.append(wrapper);
-  console.log(wrapper);
+
+  let i = 0;
+  keys.code.forEach(() => {
+    const keyboardRow = createElementWithClass('div', ['keyboard__row', `keyboard__row-${i}`]);
+    keyboard.append(keyboardRow);
+    keys.code[i].forEach((key, j) => {
+      const code = keys.code[i][j];
+      const keyBoardKey = createElementWithClass('div', ['keyboard__key', code]);
+      keyBoardKey.textContent = key;
+      keyboardRow.append(keyBoardKey);
+    });
+    i += 1;
+  });
 };
 export default createBody;
