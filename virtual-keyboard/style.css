@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -317,6 +318,44 @@ section, main, footer, header, article {
 
 html {
   font-size: 10px;
+}
+
+body {
+  background-color: #595859;
+  overflow: hidden;
+}
+
+.wrapper {
+  font-family: "Red Hat Mono", monospace;
+  font-size: 2rem;
+  color: #FFFFFF;
+  max-width: 1200px;
+  height: 100vh;
+  padding: 0 20px;
+  margin: auto;
+  text-align: center;
+  user-select: none;
+}
+
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 35vh;
+  resize: none;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+.textarea:focus {
+  outline: none;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  background-color: #d7d7ca;
+  border-radius: 10px;
+  height: 35vh;
 }
 
 /*# sourceMappingURL=style.css.map */

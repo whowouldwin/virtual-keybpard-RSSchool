@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
+html {
+  font-size: 10px;
+}
+body {
+  background-color: $color-body;
+  overflow: hidden;
+}
+.wrapper {
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 2rem;
+  color: $color-light;
+  max-width: 1200px;
+  height: 100vh;
+  padding: 0 20px;
+  margin: auto;
+  text-align: center;
+  user-select: none;
+}
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 35vh;
+  resize: none;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 2rem;
+  &:focus {
+    outline: none;
+  }
+}
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-keyboard;
+  border-radius: 10px;
+  height: 35vh;
+}

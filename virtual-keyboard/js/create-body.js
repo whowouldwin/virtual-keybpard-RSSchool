@@ -11,7 +11,7 @@ const createBody = () => {
   const title = createElementWithClass('h1', ['title'], 'RSS Virtual Keyboard');
   const textarea = createElementWithClass('textarea', ['textarea']);
   const keyboard = createElementWithClass('div', ['keyboard']);
-  const description = createElementWithClass('p', ['description'], 'The keyboard was created in the Windows operating system.');
+  const description = createElementWithClass('p', ['description'], 'The keyboard was created in the Linux operating system.');
   const language = createElementWithClass('p', ['language'], 'To switch language, use the combination: left ctrl + alt.');
   wrapper.append(title, textarea, keyboard, description, language);
   document.body.append(wrapper);
