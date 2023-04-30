@@ -20,13 +20,13 @@
   flex: 0.52;
   background-color: $color-keystrokes;
 }
-.keyboard__key.ShiftLeft,
-.keyboard__key.ShiftRight {
+.keyboard__key.ShiftLeft {
   flex: 0.92;
   background-color: $color-keystrokes;
 }
-.keyboard__key.AltLeft,
+.keyboard__key.ShiftRight,
 .keyboard__key.AltRight,
+.keyboard__key.AltLeft,
 .keyboard__key.MetaLeft,
 .keyboard__key.MetaRight{
   background-color: $color-keystrokes;
