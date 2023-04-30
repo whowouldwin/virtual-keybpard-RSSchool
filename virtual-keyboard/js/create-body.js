@@ -1,4 +1,5 @@
 import { keys } from './keys.js';
+import state from './state.js';
 
 const createBody = () => {
   function createElementWithClass(type, className, text) {
@@ -18,17 +19,17 @@ const createBody = () => {
   wrapper.append(title, textarea, keyboard, description, language);
   document.body.append(wrapper);
 
-  let i = 0;
-  keys.code.forEach(() => {
-    const keyboardRow = createElementWithClass('div', ['keyboard__row', `keyboard__row-${i}`]);
-    keyboard.append(keyboardRow);
-    keys.code[i].forEach((key, j) => {
+  let n = 0;
+  keys[state.lang][state.shift].forEach((row, i) => {
+    const keyboardRow = createElementWithClass('div', ['keyboard__row', `keyboard__row-${n}`]);
+    row.forEach((key, j) => {
       const code = keys.code[i][j];
       const keyBoardKey = createElementWithClass('div', ['keyboard__key', code]);
       keyBoardKey.textContent = key;
       keyboardRow.append(keyBoardKey);
     });
-    i += 1;
+    keyboard.append(keyboardRow);
+    n += 1;
   });
 };
 export default createBody;
