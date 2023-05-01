@@ -1,6 +1,6 @@
 const state = {
   lang: localStorage.getItem('lang') || 'eng',
-  shift: 'disabled',
+  shift: 'base',
   activeShift: false,
   activeCaps: false,
 };

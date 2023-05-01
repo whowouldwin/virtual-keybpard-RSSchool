@@ -18,10 +18,8 @@ const createBody = () => {
   const language = createElementWithClass('p', ['language'], 'To switch language, use the combination: left ctrl + alt.');
   wrapper.append(title, textarea, keyboard, description, language);
   document.body.append(wrapper);
-
-  let n = 0;
   keys[state.lang][state.shift].forEach((row, i) => {
-    const keyboardRow = createElementWithClass('div', ['keyboard__row', `keyboard__row-${n}`]);
+    const keyboardRow = createElementWithClass('div', ['keyboard__row', `keyboard__row-${i}`]);
     row.forEach((key, j) => {
       const code = keys.code[i][j];
       const keyBoardKey = createElementWithClass('div', ['keyboard__key', code]);
@@ -29,7 +27,6 @@ const createBody = () => {
       keyboardRow.append(keyBoardKey);
     });
     keyboard.append(keyboardRow);
-    n += 1;
   });
 };
 export default createBody;
